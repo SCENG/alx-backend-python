@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
-from typing import Any, Union, Sequence, Iterable, List, Tuple
+from typing import Sequence, Any, Union
 
 
-def safe_first_element(lst: Sequence) -> Union[Any, None]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
-    Return the first element of the list if it exists, otherwise return None.
+    Safely retrieves the first element from a sequence.
 
     Args:
-        lst (Sequence): The input list.
+        lst (Sequence[Any]): The input sequence.
 
     Returns:
-        Union[Any, None]: The first element of the list, or
-        None if the list is empty.
+        Union[Any, None]: The first element of the sequence if it
+        exists, otherwise None.
     """
     if lst:
         return lst[0]
